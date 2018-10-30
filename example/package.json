@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "devDependencies": {
+    "rollup": "^0.66.6",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-replace": "^2.1.0",
+    "rollup-plugin-worker": "../"
+  },
+  "dependencies": {
+    "systemjs": "git+https://github.com/systemjs/systemjs#semver:^2.0.2"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "copy": "cp public/* dist",
+    "build": "yarn clean && rollup -c && yarn copy"
+  }
+}

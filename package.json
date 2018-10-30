@@ -1,0 +1,23 @@
+{
+  "name": "rollup-plugin-worker",
+  "version": "1.0.0",
+  "author": "Johan Holmerin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:johanholmerin/rollup-plugin-worker.git"
+  },
+  "devDependencies": {
+    "prettier": "1.14.3",
+    "rollup": "^0.66.6"
+  },
+  "dependencies": {
+    "estree-walker": "^0.5.2",
+    "magic-string": "^0.25.1"
+  },
+  "scripts": {
+    "build": "rm -rf expected && yarn rollup -c",
+    "test": "yarn build && git --no-pager diff expected",
+    "lint": "prettier --single-quote --write {*.js,test/*.js}"
+  }
+}
