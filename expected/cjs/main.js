@@ -2,20 +2,20 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var __chunk_1 = require('./chunk-1380c7de.js');
+var shared_js = require('./chunk-7bc14406.js');
 
-const w = new Worker("/cjs/worker.js", { name: 'myWorker' });
+const w = new Worker("/cjs/chunk-e3f83b8f.js', { name: 'myWorker' });
 
 w.addEventListener('message', event => {
   console.log('from worker', event.data);
 });
 
-console.log(__chunk_1.href);
+console.log(shared_js.href);
 
 const n = 0;
 
 setTimeout(() => {
-  Promise.resolve(require("./chunk-1380c7de.js"));
+  Promise.resolve(require('./chunk-7bc14406.js'));
 });
 
 exports.n = n;

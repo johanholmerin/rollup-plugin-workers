@@ -1,17 +1,17 @@
-define(['require', 'exports', './chunk-b0d72e8b.js'], function (require, exports, __chunk_1) { 'use strict';
+define(['require', 'exports', './chunk-97e6029f.js'], function (require, exports, shared_js) { 'use strict';
 
-  const w = new Worker("/amd/worker.js", { name: 'myWorker' });
+  const w = new Worker("/amd/chunk-777df728.js', { name: 'myWorker' });
 
   w.addEventListener('message', event => {
     console.log('from worker', event.data);
   });
 
-  console.log(__chunk_1.href);
+  console.log(shared_js.href);
 
   const n = 0;
 
   setTimeout(() => {
-    new Promise(function (resolve, reject) { require(["./chunk-b0d72e8b.js"], resolve, reject) });
+    new Promise(function (resolve, reject) { require(['./chunk-97e6029f.js'], resolve, reject) });
   });
 
   exports.n = n;

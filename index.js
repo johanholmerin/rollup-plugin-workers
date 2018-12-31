@@ -13,10 +13,12 @@ module.exports = function worker({
 } = {}) {
   return {
     name: 'worker',
-    options({ inlineDynamicImports, experimentalCodeSplitting }) {
-      assert(!inlineDynamicImports, 'inlineDynamicImports must be false');
+    options(options) {
+      assert(!options.inlineDynamicImports, 'inlineDynamicImports must be false');
       assert(
-        experimentalCodeSplitting,
+        // Rollup 1.0 has code splitting enabled by default
+        options.experimentalCodeSplitting ||
+          !('experimentalCodeSplitting' in options),
         'experimentalCodeSplitting must be true'
       );
     },

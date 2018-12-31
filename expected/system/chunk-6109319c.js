@@ -1,9 +1,9 @@
-System.register(['./chunk-fbc9a9e9.js'], function (exports, module) {
+System.register(['./chunk-dbf50643.js'], function (exports, module) {
 	'use strict';
 	var href;
 	return {
 		setters: [function (module) {
-			href = module.a;
+			href = module.href;
 		}],
 		execute: function () {
 

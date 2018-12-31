@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "prettier": "1.14.3",
-    "rollup": "^0.66.6"
+    "rollup": "^1.0.0"
   },
   "dependencies": {
     "estree-walker": "^0.5.2",

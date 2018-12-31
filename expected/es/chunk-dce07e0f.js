@@ -1,4 +1,4 @@
-import { a as href } from './chunk-1d87b096.js';
+import { href } from './chunk-9f5ddea3.js';
 
 self.postMessage(Math.random());
 

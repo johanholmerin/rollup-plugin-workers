@@ -3,7 +3,7 @@ System.register([], function (exports, module) {
 	return {
 		execute: function () {
 
-			const href = exports('a', location.href);
+			const href = exports('href', location.href);
 
 		}
 	};
