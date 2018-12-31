@@ -11,7 +11,7 @@ Adds code splitting for module Workers to Rollup. Works with `es`, `system`,
 ## Installation
 
 ```sh
-yarn add -D git+https://github.com/johanholmerin/rollup-plugin-worker#semver:^1.0.0
+yarn add -D git+https://github.com/johanholmerin/rollup-plugin-worker#semver:^1.1.0
 ```
 
 ## Usage
