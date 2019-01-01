@@ -32,6 +32,7 @@ export default {
       publicPath: '/system'
     })
   ],
+  // Only need for Rollup < 1.0
   experimentalCodeSplitting: true
 };
 ```
