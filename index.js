@@ -1,4 +1,5 @@
 const assert = require('assert');
+const { createFilter } = require('rollup-pluginutils');
 
 const { modify, addReplacement } = require('./shared.js');
 const formats = require('./renderChunk.js');
@@ -9,8 +10,12 @@ const formats = require('./renderChunk.js');
  */
 module.exports = function worker({
   publicPath = '',
-  constructors = ['Worker']
+  constructors = ['Worker'],
+  include,
+  exclude
 } = {}) {
+  const filter = createFilter(include, exclude);
+
   return {
     name: 'worker',
     options(options) {
@@ -23,7 +28,9 @@ module.exports = function worker({
       );
     },
     // Replace `new Worker(..., { type: 'module' }) with `/*! worker-x */import(...)`
-    transform(code) {
+    transform(code, id) {
+      if (!filter(id)) return;
+
       return modify.call(this, code, ({ node, ms }) => {
         if (node.type !== 'NewExpression') return;
         if (!constructors.includes(node.callee.name)) return;

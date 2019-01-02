@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "estree-walker": "^0.5.2",
-    "magic-string": "^0.25.1"
+    "magic-string": "^0.25.1",
+    "rollup-pluginutils": "^2.3.3"
   },
   "scripts": {
     "build": "rm -rf expected && yarn rollup -c",
