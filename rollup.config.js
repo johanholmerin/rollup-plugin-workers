@@ -1,8 +1,7 @@
 const worker = require('./index.js');
 
 const defaultConfig = {
-  input: 'test/main.js',
-  experimentalCodeSplitting: true
+  input: 'test/main.js'
 };
 
 const FORMATS = ['es', 'system', 'amd', 'cjs'];
