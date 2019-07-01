@@ -1,4 +1,4 @@
-System.register(['./chunk-dbf50643.js'], function (exports, module) {
+System.register(['./shared-eac19bc2.js'], function () {
 	'use strict';
 	var href;
 	return {

@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-worker",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "author": "Johan Holmerin",
   "license": "MIT",
   "repository": {
@@ -9,12 +9,12 @@
   },
   "devDependencies": {
     "prettier": "1.14.3",
-    "rollup": "^1.0.0"
+    "rollup": "^1.11.0"
   },
   "dependencies": {
-    "estree-walker": "^0.5.2",
     "magic-string": "^0.25.1",
-    "rollup-pluginutils": "^2.3.3"
+    "rollup-pluginutils": "^2.3.3",
+    "traveler": "git+https://github.com/tsbehlman/traveler#f94765d0e8d2c540dfbeee04be8be9c516b6a881"
   },
   "scripts": {
     "build": "rm -rf expected && yarn rollup -c",

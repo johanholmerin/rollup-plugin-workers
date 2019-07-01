@@ -10,7 +10,8 @@ module.exports = FORMATS.map(format => ({
   ...defaultConfig,
   output: {
     dir: `expected/${format}`,
-    format
+    format,
+    chunkFileNames: 'chunks/[name]-[hash].js'
   },
-  plugins: [worker({ publicPath: '/' + format })]
+  plugins: [worker()]
 }));

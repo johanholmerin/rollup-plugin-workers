@@ -23,7 +23,6 @@ export default [{
     banner: 'self.importScripts && !self.System && importScripts("system.js");'
   },
   plugins: [
-    worker({ publicPath: '/system' })
-  ],
-  experimentalCodeSplitting: true
+    worker()
+  ]
 }];

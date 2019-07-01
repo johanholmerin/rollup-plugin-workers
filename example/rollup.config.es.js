@@ -7,7 +7,6 @@ export default [{
     format: 'es'
   },
   plugins: [
-    worker({ publicPath: '/es' })
-  ],
-  experimentalCodeSplitting: true
+    worker()
+  ]
 }];
