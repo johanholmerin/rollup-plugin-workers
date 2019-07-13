@@ -48,7 +48,7 @@
     if (!supportsDynamicImport() || !supportsModuleWorker()) {
         load({
           src: '/system/system.js',
-          onload: 'System.import("/system/main.js")'
+          onload: () => System.import("/system/main.js")
         });
     } else {
       load({
