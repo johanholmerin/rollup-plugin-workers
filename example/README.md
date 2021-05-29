@@ -1,4 +1,4 @@
-# `rollup-plugin-worker` example
+# `rollup-plugin-workers` example
 
 * Generates `es` and `system` outputs
 * Adds module loader to Worker -

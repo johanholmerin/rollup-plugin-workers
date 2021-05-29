@@ -1,4 +1,4 @@
-# rollup-plugin-worker
+# rollup-plugin-workers
 
 Adds code splitting for module Workers and Worklets to Rollup.
 
@@ -12,7 +12,11 @@ Adds code splitting for module Workers and Worklets to Rollup.
 ## Installation
 
 ```sh
-yarn add -D git+https://github.com/johanholmerin/rollup-plugin-worker#semver:^2.0.0
+# Yarn
+yarn add -D rollup-plugin-workers
+
+# npm
+npm install -D rollup-plugin-workers
 ```
 
 ## Usage
@@ -20,7 +24,7 @@ yarn add -D git+https://github.com/johanholmerin/rollup-plugin-worker#semver:^2.
 **rollup.config.js**
 
 ```javascript
-import worker from 'rollup-plugin-worker';
+import worker from 'rollup-plugin-workers';
 
 export default {
   input: 'main.js',

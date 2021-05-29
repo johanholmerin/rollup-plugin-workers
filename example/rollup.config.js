@@ -1,4 +1,4 @@
-import worker from 'rollup-plugin-worker';
+import worker from 'rollup-plugin-workers';
 import resolve from 'rollup-plugin-node-resolve';
 import replace from 'rollup-plugin-replace';
 

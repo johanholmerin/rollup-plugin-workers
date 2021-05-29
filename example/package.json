@@ -4,7 +4,7 @@
     "rollup": "^1.11.0",
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-replace": "^2.1.0",
-    "rollup-plugin-worker": "../"
+    "rollup-plugin-workers": "../"
   },
   "dependencies": {
     "systemjs": "git+https://github.com/systemjs/systemjs#semver:^2.0.2"

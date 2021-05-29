@@ -1,11 +1,11 @@
 {
-  "name": "rollup-plugin-worker",
+  "name": "rollup-plugin-workers",
   "version": "2.0.0",
   "author": "Johan Holmerin",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:johanholmerin/rollup-plugin-worker.git"
+    "url": "git@github.com:johanholmerin/rollup-plugin-workers.git"
   },
   "devDependencies": {
     "prettier": "1.14.3",
