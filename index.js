@@ -60,15 +60,18 @@ function findWorklet(node) {
   if (node.type !== 'ExpressionStatement') return;
 
   const { expression } = node;
-  if (expression.type !== 'CallExpression') return;
+  const callExpression =
+    expression.type === 'AwaitExpression' ? expression.argument : expression;
 
-  const { callee } = expression;
+  if (callExpression.type !== 'CallExpression') return;
+
+  const { callee } = callExpression;
   if (callee.type !== 'MemberExpression') return;
   if (callee.object.type !== 'MemberExpression') return;
   if (!callee.object.property.name.match(/^[a-z]+Worklet$/)) return;
   if (callee.property.name !== 'addModule') return;
 
-  return expression;
+  return callExpression;
 }
 
 module.exports = function worker({ include, exclude } = {}) {
