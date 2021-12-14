@@ -93,13 +93,15 @@ module.exports = function worker({ include, exclude } = {}) {
 
         const { id: path, external } = await this.resolve(url.value, id);
         if (external) continue;
-        const chunkRef = this.emitChunk(path);
+        const chunkRef = this.emitFile
+          ? this.emitFile({
+              type: 'chunk',
+              id: path,
+            })
+          : this.emitChunk(path);
+        const prefix = this.emitFile ? 'ROLLUP_FILE_URL_' : 'ROLLUP_CHUNK_URL_';
 
-        ms.overwrite(
-          url.start,
-          url.end,
-          `import.meta.ROLLUP_CHUNK_URL_${chunkRef}`
-        );
+        ms.overwrite(url.start, url.end, `import.meta.${prefix}${chunkRef}`);
       }
 
       return {
