@@ -1,10 +1,10 @@
-define(['require', 'exports', './chunks/shared-f72691bb'], function (require, exports, shared) { 'use strict';
+define(['require', 'exports', './chunks/shared-e68f0d0a'], (function (require, exports, shared) { 'use strict';
 
-  const w = new Worker(new URL(require.toUrl('chunks/worker-2b1ac478.js'), document.baseURI).href, { type: undefined, name: 'myWorker' });
+  const w = new Worker(new URL(require.toUrl('./chunks/worker-677ca0aa.js'), document.baseURI).href, { type: undefined, name: 'myWorker' });
 
-  navigator.serviceWorker.register(new URL(require.toUrl('chunks/sw-5fc9e15d.js'), document.baseURI).href, { type: undefined });
+  navigator.serviceWorker.register(new URL(require.toUrl('./chunks/sw-207d8bbb.js'), document.baseURI).href, { type: undefined });
 
-  CSS.paintWorklet.addModule(new URL(require.toUrl('chunks/paint-worklet-236c4cae.js'), document.baseURI).href);
+  CSS.paintWorklet.addModule(new URL(require.toUrl('./chunks/paint-worklet-fbab2261.js'), document.baseURI).href);
 
   w.addEventListener('message', event => {
     console.log('from worker', event.data);
@@ -15,11 +15,11 @@ define(['require', 'exports', './chunks/shared-f72691bb'], function (require, ex
   const n = 0;
 
   setTimeout(() => {
-    new Promise(function (resolve, reject) { require(['./chunks/shared-f72691bb'], resolve, reject) });
+    new Promise(function (resolve, reject) { require(['./chunks/shared-e68f0d0a'], resolve, reject); });
   });
 
   exports.n = n;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
-});
+}));

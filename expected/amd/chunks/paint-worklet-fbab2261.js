@@ -1,4 +1,4 @@
-define(function () { 'use strict';
+define((function () { 'use strict';
 
   registerPaint(
     'paint-worklet',
@@ -9,4 +9,4 @@ define(function () { 'use strict';
     }
   );
 
-});
+}));

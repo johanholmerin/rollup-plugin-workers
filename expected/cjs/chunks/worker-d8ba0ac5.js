@@ -1,6 +1,6 @@
 'use strict';
 
-var shared = require('./shared-02d44c3a.js');
+var shared = require('./shared-9c393e62.js');
 
 self.postMessage(Math.random());
 

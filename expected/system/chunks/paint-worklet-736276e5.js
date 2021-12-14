@@ -1,7 +1,7 @@
-System.register([], function () {
+System.register([], (function () {
   'use strict';
   return {
-    execute: function () {
+    execute: (function () {
 
       registerPaint(
         'paint-worklet',
@@ -12,6 +12,6 @@ System.register([], function () {
         }
       );
 
-    }
+    })
   };
-});
+}));

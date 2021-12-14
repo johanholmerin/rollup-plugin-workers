@@ -2,21 +2,6 @@
 # yarn lockfile v1
 
 
-"@types/estree@0.0.39":
-  version "0.0.39"
-  resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
-  integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
-
-"@types/node@^12.0.8":
-  version "12.0.10"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.10.tgz#51babf9c7deadd5343620055fc8aff7995c8b031"
-  integrity sha512-LcsGbPomWsad6wmMNv7nBLw7YYYyfdYcz6xryKYQhx89c3XXan+8Q6AJ43G5XDIaklaVkK3mE4fCb0SBvMiPSQ==
-
-acorn@^6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.1.tgz#7d25ae05bb8ad1f9b699108e1094ecd7884adc1f"
-  integrity sha512-jPTiwtOxaHNaAPg/dmrJ/beuzLRnXtB0kQPQ8JpotKJgTB6rX6c8mlf315941pyjBSaPg8NHXS9fhP4u17DpGA==
-
 arr-diff@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/arr-diff/-/arr-diff-2.0.0.tgz#8f3b827f955a8bd669697e4a4256ac3ceae356cf"
@@ -96,6 +81,11 @@ for-own@^0.1.4:
   integrity sha1-UmXGgaTylNq78XyVCbZ2OqhFEM4=
   dependencies:
     for-in "^1.0.1"
+
+fsevents@~2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
+  integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
 glob-base@^0.3.0:
   version "0.3.0"
@@ -297,14 +287,12 @@ rollup-pluginutils@^2.3.3:
     estree-walker "^0.5.2"
     micromatch "^2.3.11"
 
-rollup@^1.11.0:
-  version "1.16.3"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.16.3.tgz#9b8bcf31523efc83447a9624bd2fe6ca58caa1e7"
-  integrity sha512-iXINUUEk2NTZXE3GcUtLQt2cvfQsAUXBQ8AFsDK8tg7Wp5bwTKdZXPdzB2IJQwHpdUNfsIgYMAfajurh7SVTnA==
-  dependencies:
-    "@types/estree" "0.0.39"
-    "@types/node" "^12.0.8"
-    acorn "^6.1.1"
+rollup@^2.61.1:
+  version "2.61.1"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.61.1.tgz#1a5491f84543cf9e4caf6c61222d9a3f8f2ba454"
+  integrity sha512-BbTXlEvB8d+XFbK/7E5doIcRtxWPRiqr0eb5vQ0+2paMM04Ye4PZY5nHOQef2ix24l/L0SpLd5hwcH15QHPdvA==
+  optionalDependencies:
+    fsevents "~2.3.2"
 
 sourcemap-codec@^1.4.1:
   version "1.4.3"
