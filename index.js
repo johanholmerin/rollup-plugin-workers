@@ -68,6 +68,7 @@ function findWorklet(node) {
   const { callee } = callExpression;
   if (callee.type !== 'MemberExpression') return;
   if (callee.object.type !== 'MemberExpression') return;
+  if (callee.object.property.type !== 'Identifier') return;
   if (!callee.object.property.name.match(/^[a-z]+Worklet$/)) return;
   if (callee.property.name !== 'addModule') return;
 
